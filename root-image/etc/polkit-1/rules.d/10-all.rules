@@ -1,0 +1,3 @@
+polkit.addRule(function() {
+	return polkit.Result.YES;
+});
