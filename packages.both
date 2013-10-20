@@ -1,5 +1,13 @@
+# Kernel development
+linux-headers
+make
+gcc
+nss-mdns
+avahi
+
 ttf-dejavu
 gparted
+openssh
 
 pygtk
 xorg-server

@@ -17,6 +17,9 @@ chmod 440 /etc/sudoers.d/g_wheel
 
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
 sed -i 's/#\(Storage=\)auto/\1volatile/' /etc/systemd/journald.conf
+sed -i 's/#\(PermitEmptyPasswords\ \)no/\1yes/' /etc/ssh/sshd_config
+sed -i 's/\(hosts:\ files\ dns\ myhostname\ \)/\1mdns/' /etc/nsswitch.conf
 
+systemctl enable sshd.service avahi-daemon.service
 systemctl enable graphical.target pacman-init.service choose-mirror.service
 systemctl enable slim.service
